@@ -1,0 +1,79 @@
+@use "sass:map";
+
+.sidebar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;    
+    background-color: $black;
+}
+
+.site-logo{
+    margin-left:10px;
+}
+
+.nav{
+    display:none;
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+    &::before, &::after{
+        @include bar($header-a-color, 50%);
+    }
+}
+
+.nav__item a{
+    padding:20px 0;
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+    color: $header-a-color;
+    font-weight: 600;
+    font-family: 'EB Garamond', 'serif';
+    &:hover{
+        text-decoration:underline;
+    }
+}
+
+.social{
+    display:none;    
+    & .btn {
+        padding: 5px;
+        margin: 0 5px;
+        border-radius: 2px;
+        background-color: $header-a-color;
+        & i{
+            text-decoration: none;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $social-color;
+        }
+    }
+}
+
+@media (min-width: map.get($breakpoints, "md")) {
+    .sidebar{
+        justify-content:flex-start;
+        flex-direction:column;
+        border-right: 5px solid $primary-color;
+    }
+    .btn-toggle{
+        display:none;
+    }
+    .nav{
+        display: block;
+    }
+    .site-logo{
+        width: 80px;
+        height: 80px;
+        margin-top: 70px;
+    }
+    .social{
+        display:flex;
+    }
+}
+
