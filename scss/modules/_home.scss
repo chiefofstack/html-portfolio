@@ -1,0 +1,142 @@
+@use "sass:map";
+
+.home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315deg, transparent 25%, rgba(0, 0, 0, 0.6509803922)), url(../images/home-bg.webp) center/cover no-repeat;
+    background-position-y: 88%;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.message{
+    position:relative;
+    margin-top: calc(50vh - 30%);
+    text-align: center;
+    max-width: 550px;
+    background-color: #ffffff70;
+    padding: 20px 20px;
+    border-radius: 7px;
+
+    & h1{
+        font-family: 'EB Garamond', 'serif';
+        color: $white;
+        text-shadow: 0 0 black;
+        margin:0;
+        font-size: 1.5rem;
+        font-weight:normal
+    }
+
+    &::after{
+        @include triangle(#ffffff70, 10px);
+        position:relative;
+        bottom: -69px;
+        left: -63px;
+    }
+}
+.scroll-down{
+    margin-bottom: 20px;
+}
+
+.scroll-down a{
+    display:flex;
+    align-items: center;
+    font-family: 'EB Garamond';
+    background-color: rgba(205, 148, 43, 0.5019607843);
+    border: 2px solid #ffffff;
+    transition: 0.5s ease;
+
+    & i{
+        margin-left:10px;
+    }
+
+    &:hover{
+        background-color: #cd942b;
+        margin-bottom: 5px;
+    }
+}
+
+.portfolio{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: $body-bg-color;
+}
+
+.heading{
+    width: 100%;
+    text-align: center;
+    font-family: 'EB Garamond';
+    text-transform: uppercase;
+    color: $body-heading-color;
+    margin-top: 50px;
+    &::after{
+        @include bar($primary-color, 5%);
+        margin:0 auto;
+    }
+    h2{
+        margin-bottom: 0;
+    }
+}
+
+.card{
+    background-color: $white;
+    box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
+
+    & img{
+        width:100%;
+    }
+
+    & p, & .btn{
+        margin: 1.25rem;
+    }
+}
+
+.btn-read-more{
+    display: inline-flex;
+    align-items: center;
+    & i{
+        margin-left:10px;
+    }
+}
+
+.contact{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: $body-bg-color;
+}
+
+
+
+@media (min-width: map.get($breakpoints, "sm")) {
+    .message h1{
+        font-size:2rem;
+    }
+}
+
+@media (min-width: map.get($breakpoints, "md")) {
+    .home{        
+        background: linear-gradient(315deg, transparent 25%, #000000a6), url(../images/home-bg.webp) center/cover no-repeat;
+        background-position-y: 88%;
+    } 
+    .message{
+        margin-top: calc(50vh - 20%);
+    }
+}
+
+@media (min-width: map.get($breakpoints, "xl")) {
+    .home{        
+        background: linear-gradient(315deg, transparent 25%, #000000a6), url(../images/home-bg.webp) center/cover no-repeat;
+        background-position-y: 78%;
+    } 
+}
+
