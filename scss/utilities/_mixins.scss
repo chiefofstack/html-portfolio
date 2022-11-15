@@ -1,0 +1,27 @@
+@mixin triangle($color: null, $size: 90px) {
+    width: 0;
+    height: 0;
+    content: '';
+    z-index: 1;
+    border-style: solid;
+    border-width: 25px $size 0;
+    @if($color != null){
+        border-color: $color transparent transparent;
+    }
+}
+
+@mixin bar($color: $header-a-color, $width: 75px){
+    width: $width;
+    height: 3px;
+    content: '';
+    z-index: 1;
+    display: block;
+    background-color: $color;
+    margin: 20px auto;
+}
+
+@mixin gutter(){
+    padding-right: calc($gutter-width * .5);
+    padding-left: calc($gutter-width * .5);
+    margin-top: $gutter-width;
+}
