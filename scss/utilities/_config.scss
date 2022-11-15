@@ -1,0 +1,41 @@
+// Global Config
+$primary-color: #cd942b;
+$body-color: #6d736f;
+// $body-h-color: #ce932e;
+$body-bg-color:#d5d5d3;
+$body-heading-color:#1e1e1e;
+$header-a-color: #93611c;
+
+$social-color: #3a2a14;
+$linkedin-color: #0077b5;
+$white: #ffffff;
+$black: #000;
+
+$breakpoints:(
+    "xs": 0px,
+    "sm": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px,
+    "xxl": 1400px,    
+);
+
+
+$columnWidths: (  
+  "1": 8.33%,
+  "2": 16.66%,
+  "3": 25%,
+  "4": 33.33%,
+  "5": 41.66%,
+  "6": 50%,
+  "7": 58.34%,
+  "8": 66.66%,
+  "9": 75%,
+  "10": 83.33%,
+  "11": 91.66%,
+  "12": 100%,  
+);
+
+
+
+$gutter-width: 1.5rem;
