@@ -13,11 +13,11 @@
 }
 .message{
     position:relative;
-    margin-top: calc(50vh - 30%);
+    margin-top: calc(50vh - 35%);
     text-align: center;
     max-width: 550px;
     background-color: #ffffff70;
-    padding: 20px 20px;
+    padding: 20px 20px 0;
     border-radius: 7px;
 
     & h1{
@@ -29,10 +29,9 @@
     }
 
     &::after{
-        @include triangle(#ffffff70, 10px);
+        @include triangle(#ffffff70, 20px);
         position:relative;
-        bottom: -69px;
-        left: -63px;
+        bottom: -49px;
     }
 }
 .scroll-btn{
@@ -158,8 +157,12 @@
 }
 
 @media (min-width: map.get($breakpoints, "sm")) {
-    .message h1{
-        font-size:2rem;
+    .message{
+        margin-top: calc(50vh - 24%);
+        
+        & h1{
+            font-size:2rem;
+        }
     }
 }
 
