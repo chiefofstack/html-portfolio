@@ -34,27 +34,35 @@
         bottom: -49px;
     }
 }
-.scroll-btn{
-    margin-bottom: 20px;
-}
 
-.scroll-btn a{
+.scroll-btn {    
     display:flex;
-    align-items: center;
-    font-family: 'EB Garamond',serif;
-    background-color: rgba(205, 148, 43, 0.5019607843);
-    border: 2px solid #ffffff;
-    transition: 0.5s ease;
+    justify-content: center;
+    position: relative;
+    padding: 0 10px 10px;    
+    height: 100px;    
 
-    & i{
-        margin-left:10px;
-    }
-
-    &:hover{
-        background-color: #cd942b;
-        margin-bottom: 5px;
+    & .label{
+        display: block;
+        margin-top: 75px;
+        font-family: 'EB Garamond', serif;
+        font-size: 0.8rem;
+        color: #fff;
+        text-transform: uppercase;
+        white-space: nowrap;
+        opacity: .25;
+        animation: pulse 2s linear alternate infinite;
     }
 }
+
+.chevron-down {
+    @include chevron("down");
+}
+
+.chevron-up {
+    @include chevron("up");
+}
+    
 
 .portfolio{
     display: flex;
