@@ -27,6 +27,9 @@
     width: 100%;
     height: auto;
     background-color: $body-bg-color;
+    & .row{
+        margin-top:0;
+    }
 }
 .card-about{
     margin-bottom:100px;
