@@ -17,12 +17,17 @@
     z-index: 1;
     display: block;
     background-color: $color;
-    margin: 20px auto;
 }
 
-@mixin gutter(){
-    padding-right: calc($gutter-width * .5);
-    padding-left: calc($gutter-width * .5);
+@mixin gutter($size:"xs"){    
+    @if($size == "md"){
+        $size : $gutter-width;
+    }
+    @else if($size == "xs"){
+        $size : $gutter-width-xs;
+    }
+    padding-right: calc($size * .5);
+    padding-left: calc($size * .5);
     margin-top: $gutter-width;
 }
 
