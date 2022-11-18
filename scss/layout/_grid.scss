@@ -3,7 +3,7 @@
 //CSS Grid
 .grid{
     display:grid;
-    grid-template-rows: 10vh 90vh;
+    grid-template-rows: 8vh 92vh;
 }
     
 .content{
@@ -17,10 +17,10 @@
     display: flex;
     flex-wrap: wrap;
     width:100%;
-    @include gutter();
+    @include gutter("xs");
 
     & > *{
-        @include gutter();
+        @include gutter("xs");
     }
 }
 
@@ -56,6 +56,13 @@
         grid-template-columns: 30vw 70vw;
         grid-template-rows:100vh;
     }
+
+    .row{
+        @include gutter("md");    
+        & > *{
+            @include gutter("md");
+        }
+    }
 }
 
 @media (min-width: map.get($breakpoints, "lg")){
@@ -63,7 +70,3 @@
         grid-template-columns: 15vw 85vw;
     }
 }
-
-
-
-
