@@ -32,7 +32,7 @@
     &::after{
         @include triangle(#ffffff70, 20px);
         position:relative;
-        bottom: -49px;
+        bottom: -43px;
     }
 }
 
@@ -97,6 +97,10 @@
 
     & img{
         width:100%;
+    }
+    & h2{
+        margin: 1.25rem;
+        color: $primary-color;
     }
 
     & p, & .btn{
