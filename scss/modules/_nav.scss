@@ -97,12 +97,33 @@
     }
 
     @media (min-height: map.get($breakpoints, "xs")) {
+        .site-logo{
+            margin-top: 20px;
+        }
+
         .nav::before, .nav::after{
             margin: 0 auto;
         }
         .nav__item a{
             padding: 5px 0;
         }    
+    }
+
+
+    @media (min-height: 340px) {
+        .site-logo{
+            margin-top: 30px;
+        }
+
+        .nav::before, .nav::after{
+            margin: 5px auto;
+        }
+        .nav__item a{
+            padding: 5px 0;
+        } 
+        .social {
+            display:flex;
+        }
     }
 
     @media (min-height: map.get($breakpoints, "sm")) {
