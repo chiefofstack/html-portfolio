@@ -12,7 +12,7 @@ $white: #ffffff;
 $black: #000;
 
 $breakpoints:(
-    "xs": 0px,
+    "xs": 280px,
     "sm": 576px,
     "md": 768px,
     "lg": 992px,
@@ -39,3 +39,5 @@ $columnWidths: (
 
 
 $gutter-width: 1.5rem;
+$gutter-width-xs: 0;
+
