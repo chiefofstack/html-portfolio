@@ -17,14 +17,15 @@
     text-align: center;
     max-width: 550px;
     background-color: #ffffff70;
-    padding: 20px 20px 0;
+    padding: 10px 0 0;
     border-radius: 7px;
+    
 
     & h1{
         color: $white;
         text-shadow: 0 0 black;
         margin:0;
-        font-size: 1.5rem;
+        font-size: 1.35rem;
         font-weight:normal
     }
 
@@ -72,6 +73,7 @@
     width: 100%;
     height: auto;
     background-color: $body-bg-color;
+    padding-bottom:20px;
 }
 
 .heading{
@@ -79,7 +81,7 @@
     text-align: center;
     text-transform: uppercase;
     color: $body-heading-color;
-    margin-top: 50px;
+    margin-top: 30px;
     &::after{
         @include bar($primary-color, 5%);
         margin:0 auto;
@@ -135,12 +137,12 @@
     & .contact-number{
         font-size: 1.15rem;
         font-weight: 600;
+        overflow-wrap: break-word;
     }
 }
 
 .contact-form{
-    margin: 1.25rem 4rem 0 1.25rem;
-
+    margin: 1.25rem;
     & .btn{
         margin-left:0;
     }
@@ -148,9 +150,11 @@
 
 .input-fields {
     display:flex;
-    & .form-group + .form-group{
-        margin-left: 15px;
-    }
+    flex-direction: column;  
+}
+
+.message-field{
+    height: 150px;
 }
 
 .footer{
@@ -164,10 +168,19 @@
     background-position-y: 100%;
 }
 
+@media (min-width: map.get($breakpoints, "xs")) {
+    .message{
+        padding: 10px 10px 0;
+    }
+}
+
+
+
 @media (min-width: map.get($breakpoints, "sm")) {
     .message{
         margin-top: calc(50vh - 24%);
-        
+        padding: 15px 15px 0;
+
         & h1{
             font-size:2rem;
         }
@@ -181,6 +194,21 @@
     } 
     .message{
         margin-top: calc(50vh - 20%);
+        padding: 20px 20px 0;
+    }
+}
+
+
+@media (min-width: map.get($breakpoints, "lg")) {
+    .input-fields{
+        flex-direction: row;
+        & .form-group + .form-group{
+            margin-left: 15px;
+        }
+
+        & .form-group{
+            width:50%;
+        }
     }
 }
 
@@ -189,5 +217,9 @@
         background: linear-gradient(315deg, transparent 25%, #000000a6), url(../images/home-bg.webp) center/cover no-repeat;
         background-position-y: 78%;
     } 
+
+    .contact-form{
+        margin: 1.25rem 4rem 0 1.25rem;
+    }
 }
 
