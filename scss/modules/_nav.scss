@@ -19,6 +19,7 @@
     padding-left: 0;
     &::before, &::after{
         @include bar($header-a-color, 50%);
+        margin: 20px auto;
     }
 }
 
@@ -55,6 +56,8 @@
     }
 }
 
+
+
 @media (min-width: map.get($breakpoints, "md")) {
     .sidebar{
         justify-content:flex-start;
@@ -71,9 +74,63 @@
         width: 80px;
         height: 80px;
         margin-top: 70px;
+        margin-left:0;
     }
     .social{
         display:flex;
     }
+}
+
+//Landscape view
+@media (orientation:landscape){
+    .site-logo{
+        margin-top: 0;
+    }
+    .nav::before, .nav::after{
+        margin: 0 auto;
+    }
+    .nav__item a{
+        padding: 5px 0;
+    }
+    .social{
+        display:none;
+    }
+
+    @media (min-height: map.get($breakpoints, "xs")) {
+        .nav::before, .nav::after{
+            margin: 0 auto;
+        }
+        .nav__item a{
+            padding: 5px 0;
+        }    
+    }
+
+    @media (min-height: map.get($breakpoints, "sm")) {
+        .site-logo{
+            margin-top: 40px;
+        }
+        .nav::before, .nav::after{
+            margin: 10px auto;
+        }
+        .nav__item a{
+            padding: 10px 0;
+        }
+        .social{
+            display:flex;
+        }   
+    }
+
+    @media (min-height: map.get($breakpoints, "md")) {
+        .site-logo{
+            margin-top: 70px;
+        }
+        .nav::before, .nav::after{
+            margin: 20px auto;
+        }
+        .nav__item a{
+            padding: 20px 0;
+        }
+    }
+
 }
 
