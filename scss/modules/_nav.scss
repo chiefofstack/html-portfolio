@@ -109,7 +109,7 @@
         }    
     }
 
-
+    //special breakpoint the goes between xs and sm
     @media (min-height: 340px) {
         .site-logo{
             margin-top: 30px;
@@ -121,9 +121,16 @@
         .nav__item a{
             padding: 5px 0;
         } 
-        .social {
-            display:flex;
+
+        @media (min-width: map.get($breakpoints,"md")){
+            .social {
+                display:flex;
+            }
+            .site-logo{
+                margin-top: 0px;
+            }
         }
+
     }
 
     @media (min-height: map.get($breakpoints, "sm")) {
@@ -136,9 +143,6 @@
         .nav__item a{
             padding: 10px 0;
         }
-        .social{
-            display:flex;
-        }   
     }
 
     @media (min-height: map.get($breakpoints, "md")) {
