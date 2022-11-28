@@ -100,29 +100,43 @@ p {
     }
 }
 
-.btn-toggle{  //default
+.btn-toggle{  //default    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 30px;
     background:none;
 }
 
 
-.hamburger {    
-    display: block;
-    position: relative;
+.hamburger, .hamburger::before, .hamburger::after {
     width: 30px;
-    height: 18px;
-    border-top: solid 3px $primary-color;
-    border-bottom: solid 3px $primary-color;
+    height: 3px;
+    background-color: $primary-color;
+    border-radius: 1px;
+    position: absolute;
+}
 
-    &:before{
-        display:block;
-        position: absolute;
-        content: '';
-        width: 30px;
-        height: 3px;
-        background: $primary-color;
-        top: 4px;   
+.hamburger {
+    &::before, &::after{
+        content: "";
+        display: block;
+    }
+
+    &::before{
+        top: -10px;
+        transition: bottom 0.1s 0.25s ease-in, transform 0.22s;
+        
+    }
+
+    &::after{
+        top: 10px;
+        transition: bottom 0.1s 0.25s ease-in, transform 0.22s;
     }
 }
+
+
 
 .input-field{
     width:100%;
