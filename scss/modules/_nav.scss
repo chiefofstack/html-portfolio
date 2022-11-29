@@ -38,15 +38,16 @@
 }
 
 .nav.active{
-    position: absolute;
-    top: 60px;
-    width: 100%;
     display: block;
     background-color: #000;
-    z-index: 9;
     margin: 0;
-    margin-left: -10px;    
+
+    &::before, &::after{
+        width:100%;
+        margin:0;
+    }
 }
+
 .hamburger.active{
     height:auto;
 
@@ -59,11 +60,6 @@
         transform: rotate(225deg);
     }
 }
-
-.btn-toggle:has(+ .active) {
-    // margin: 7px 0;
-}
-
 
 .social{
     display:none;    
