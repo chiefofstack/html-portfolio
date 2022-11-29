@@ -11,7 +11,7 @@
     <body class="grid">
         <!-- Sidebar Nav-->
         <header class="sidebar">
-            <a class="site-logo" href="index.html">
+            <a class="site-logo" href="index.html#home">
                 <b class="srt">Mark Jason Acab</b>
             </a>
             <a href="#" class="btn btn-toggle">
@@ -144,25 +144,38 @@
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                                 </div>
                                 <div class="col-12 col-lg-6">
+                                    <h3>Send Me A Message</h3>
+                                    <p class="form-message">* Required</p>                                    
                                     <div class="contact-form">
-                                        <div class="input-fields">
+                                        <form method="post">
+                                            <div class="input-fields">
+                                                <div class="form-group">
+                                                    <input type="text" id="firstName" name="firstName" class="input-field" placeholder="First Name *">
+                                                    <span class="input-error"></span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" id="lastName" name="lastName" class="input-field" placeholder="Last Name *">
+                                                    <span class="input-error"></span>
+                                                </div>
+                                            </div>           
                                             <div class="form-group">
-                                                <input type="text" id="firstName" name="firstName" class="input-field" placeholder="First Name">
+                                                <input type="text" id="email" name="email" class="input-field" placeholder="Email *  (ex. name@email.com)">
+                                                <span class="input-error"></span>
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" id="lastName" name="lastName" class="input-field" placeholder="Last Name">
+                                                <input type="text" id="telephone" name="telephone" class="input-field" placeholder="Telephone (ex. +447471434452, 07471434452)">
+                                                <span class="input-error"></span>
                                             </div>
-                                        </div>           
-                                        <div class="form-group">
-                                            <input type="text" id="email" name="email" class="input-field" placeholder="Email">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" id="subject" name="subject" class="input-field" placeholder="Subject">
-                                        </div>
-                                        <div class="form-group">
-                                            <textarea id="message-field" name="message-field" class="message-field input-field" placeholder="Message" rows="10"></textarea>
-                                        </div>
-                                        <a href="#" class="btn btn-sm btn-read-more">Send Message<i class="fa fa-paper-plane"></i></a>
+                                            <div class="form-group">
+                                                <input type="text" id="subject" name="subject" class="input-field" placeholder="Subject *">
+                                                <span class="input-error"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea id="message-field" name="message-field" class="message-field input-field" placeholder="Message *" rows="10"></textarea>
+                                                <span class="input-error"></span>
+                                            </div>
+                                            <a href="#" id="sendMessage" class="btn btn-sm btn-read-more">Send Message<i class="fa fa-paper-plane"></i></a>
+                                        </form>               
                                     </div>
                                 </div>
                             </div>
@@ -185,5 +198,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="js/typewriter.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/home.js"></script>
     </body>
 </html>
