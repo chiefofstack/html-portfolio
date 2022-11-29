@@ -6,29 +6,25 @@ const $hamburger = $('.btn-toggle > .hamburger');
 
 // Show or Hide Nav menu and toggle button
 function toggleMenu(status){
-    if(status == "hide"){
-        $toggle.after($nav);
+    if(status == "hide"){        
+        $grid.removeClass('active');        
         $nav.removeClass('active');
         $hamburger.removeClass('active');
-        $grid.removeClass('active');
     }
-    else{        
-        $nav.parent().after($nav);
+    else{
+        $grid.addClass('active');    
         $nav.addClass('active');
-        $hamburger.addClass('active');
-        $grid.addClass('active');  
+        $hamburger.addClass('active');        
     }
 }
 
 // Toggle active state of button and nav 
 $('.btn-toggle').on('click', function(){    
-    if($nav.hasClass('active')){        
-        toggleMenu('hide');
-        $nav.slideUp(400);  
+    if($nav.hasClass('active')){ 
+        toggleMenu('hide');      
     }
     else{     
         toggleMenu('show');
-        $nav.slideDown(400);     
     }  
 });
 

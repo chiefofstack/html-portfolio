@@ -87,8 +87,6 @@ function validate(field, label, required, type){
             return true;            
         }
     }
-
-
 }
 
 
