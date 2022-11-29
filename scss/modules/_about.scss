@@ -19,6 +19,14 @@
     margin-bottom: 30px;
     text-shadow: 0 0 4px black;    
 }
+
+.about-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #d5d5d3;
+}
+
 .about{
     display: flex;
     flex-wrap:wrap;
