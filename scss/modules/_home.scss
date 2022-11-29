@@ -143,6 +143,16 @@
         font-weight: 600;
         overflow-wrap: break-word;
     }
+
+    & .success{
+        color: #38cc64;
+        font-weight:bold;
+    }
+    
+    & .not-success{
+        color: $red;
+        font-weight:bold;
+    }
 }
 
 .contact-form{
