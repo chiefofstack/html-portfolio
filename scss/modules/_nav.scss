@@ -14,7 +14,6 @@
 }
 
 
-//nav mobile style
 .nav{
     display: block;
     list-style: none;
@@ -92,6 +91,7 @@
         display:none;
     }
     .nav{
+        width:80%;
         &::before, &::after{        
             margin: 20px auto;
             @include bar($header-a-color, 50%);
