@@ -56,7 +56,7 @@
 @media(max-width: map.get($breakpoints, "md")){
     @media(min-height:0){
         .grid{
-            transition: 0.5s;
+            transition: 0.2s;
             grid-template-rows: 60px calc(100vh - 60px);
         }
         .grid.active{

@@ -28,8 +28,11 @@
     }
 }
 
-.nav__item:first-child{    
-    border-top: 1px solid #2d1f0b;
+.nav__item{    
+    border-bottom: 1px solid #2d1f0b;
+    &:first-child{
+        border-top: 1px solid #2d1f0b;
+    }
 }
 .nav__item a{
     padding:20px 0;
@@ -39,7 +42,6 @@
     color: $header-a-color;
     font-weight: 600;
     font-family: 'EB Garamond', 'serif';
-    border-bottom: 1px solid #2d1f0b;
     &:hover{
         text-decoration:underline;
     }
@@ -95,6 +97,12 @@
         &::before, &::after{        
             margin: 20px auto;
             @include bar($header-a-color, 50%);
+        }
+    }
+    .nav__item{ 
+        border:none;
+        &:first-child{
+            border:none;
         }
     }
     .site-logo{

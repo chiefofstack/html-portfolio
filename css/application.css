@@ -1059,7 +1059,7 @@ p {
 }
 @media (max-width: 768px) and (min-height: 0) {
   .grid {
-    transition: 0.5s;
+    transition: 0.2s;
     grid-template-rows: 60px calc(100vh - 60px);
   }
   .grid.active {
@@ -1120,6 +1120,9 @@ p {
   margin: 0;
 }
 
+.nav__item {
+  border-bottom: 1px solid #2d1f0b;
+}
 .nav__item:first-child {
   border-top: 1px solid #2d1f0b;
 }
@@ -1132,7 +1135,6 @@ p {
   color: #93611c;
   font-weight: 600;
   font-family: "EB Garamond", "serif";
-  border-bottom: 1px solid #2d1f0b;
 }
 .nav__item a:hover {
   text-decoration: underline;
@@ -1190,6 +1192,12 @@ p {
     z-index: 1;
     display: block;
     background-color: #93611c;
+  }
+  .nav__item {
+    border: none;
+  }
+  .nav__item:first-child {
+    border: none;
   }
   .site-logo {
     width: 80px;
