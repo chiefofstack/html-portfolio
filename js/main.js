@@ -1,62 +1,50 @@
-// Typing Effect
-const typing = document.getElementById('typing');
-var typewriter = new Typewriter(typing, {
-    loop: true,
-    cursor:'|'
-});
-
-typewriter.typeString("Hey! My name is Mark Acab. ")
-    .pauseFor(3000)    
-    .deleteChars(27)    
-    .typeString("I'm a Web Developer.")    
-    .pauseFor(3000)
-    .deleteAll()
-    .typeString('Please check out my works.')
-    .pauseFor(3000)
-    .deleteAll()
-    .start()
-
-
-
-
-    
-
-
 // Mobile Menu toggle
+const $grid = $('.grid');
 const $nav = $('.sidebar > .nav');
 const $toggle = $('.btn-toggle');
 const $hamburger = $('.btn-toggle > .hamburger');
 
-// Toggle active state of button and nav 
-$('.btn-toggle').on('click', function(e){    
-
-    if($nav.hasClass('active')){
+// Show or Hide Nav menu and toggle button
+function toggleMenu(status){
+    if(status == "hide"){
+        $toggle.after($nav);
         $nav.removeClass('active');
-        $hamburger.removeClass('active');       
+        $hamburger.removeClass('active');
+        $grid.removeClass('active');
     }
-    else{
+    else{        
+        $nav.parent().after($nav);
         $nav.addClass('active');
-        $hamburger.addClass('active');       
+        $hamburger.addClass('active');
+        $grid.addClass('active');  
+    }
+}
+
+// Toggle active state of button and nav 
+$('.btn-toggle').on('click', function(){    
+    if($nav.hasClass('active')){        
+        toggleMenu('hide');
+        $nav.slideUp(400);  
+    }
+    else{     
+        toggleMenu('show');
+        $nav.slideDown(400);     
     }  
-    console.log($nav.hasClass('active'));
 });
 
 // Hide menu on window resize
-$(window).on("resize", function(event){
-    $nav.removeClass('active');
-    $hamburger.removeClass('active');
+$(window).on("resize", function(e){
+    toggleMenu('hide');
 });
 
 
-// Hide menu if clicked outside the toggler or navigation
-$(document).on('mouseup',function(e) 
+// Hide menu if clicked outside the toggler
+$(document).on('mouseDown click',function(e) 
 {   //do not process the mouse click if on toggle button
     if(!($toggle.is(e.target) || $toggle.has(e.target).length)){ 
-        //remove active class if outside the navigation
-        if (!$nav.is(e.target) && $nav.has(e.target).length === 0) 
-        {
-            $nav.removeClass('active');        
-            $hamburger.removeClass('active');
-        } 
+        toggleMenu('hide');
     }   
+
 });
+
+
