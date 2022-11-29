@@ -3,9 +3,11 @@
 //CSS Grid
 .grid{
     display:grid;
+    overflow-y:hidden;
 }
     
 .content{
+    min-height: 80vh;
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
@@ -55,6 +57,10 @@
     @media(min-height:0){
         .grid{
             grid-template-rows: 60px calc(100vh - 60px);
+        }
+        .grid.active{
+            transition:smooth;
+            grid-template-rows: 60px 296px calc(100vh - 356px);
         }
     }
 }
