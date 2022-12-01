@@ -1,4 +1,5 @@
 @use "sass:map";
+$innerHeight: var(--app-height); 
 
 //CSS Grid
 .grid{
@@ -57,11 +58,11 @@
     @media(min-height:0){
         .grid{
             transition: 0.2s;
-            grid-template-rows: 60px calc(var(--app-height) - 60px);
+            grid-template-rows: 60px calc($innerHeight - 60px);
         }
         .grid.active{
             transition: 0.5s;
-            grid-template-rows: 386px calc(var(--app-height) - 356px);
+            grid-template-rows: 386px calc($innerHeight - 356px);
         }
     }
 }
