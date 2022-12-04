@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 // Mobile Menu toggle
 const $grid = $('.grid');
 const $nav = $('.sidebar > .nav');
@@ -29,7 +31,7 @@ $('.btn-toggle').on('click', function(){
 });
 
 // Hide menu on window resize
-$(window).on("resize", function(e){
+$(window).on("resize", function(){
     toggleMenu('hide');
 });
 
@@ -46,8 +48,8 @@ $(document).on('mouseDown click',function(e)
 
 //  iOS inner height solution
 const appHeight = () => {
-    const doc = document.documentElement
-    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
-}
-window.addEventListener('resize', appHeight)
-appHeight()
+    const doc = document.documentElement;
+    doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+};
+window.addEventListener('resize', appHeight);
+appHeight();
