@@ -7,4 +7,4 @@ var typewriter = new Typewriter(typing, {
 
 typewriter.typeString("About Me ")
     .pauseFor(18000)  
-    .start()
+    .start();

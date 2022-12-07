@@ -7,4 +7,4 @@ var typewriter = new Typewriter(typing, {
 
 typewriter.typeString("Coding Examples ")
     .pauseFor(18000)  
-    .start()
+    .start();

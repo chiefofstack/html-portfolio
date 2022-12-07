@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 // Typing Effect
 const typing = document.getElementById('typing');
 var typewriter = new Typewriter(typing, {
@@ -22,8 +24,7 @@ typewriter.typeString("Hey! My name is Mark Acab. ")
 function validate(field, label, required, type){
     const inputField = $(`#${field}`);    
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; //email regex
-    const phonePattern = /^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/ //UK phone regex
-    var option;
+    const phonePattern = /^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/; //UK phone regex
     let passed = true;
     
     // Validate required
@@ -92,18 +93,14 @@ function validate(field, label, required, type){
 
 $('#sendMessage').on('click', ()=>{    
     const firstName = $('#firstName');
-    const lastName = $('#lastName');
-    const email = $('#email');
-    const subject = $('#subject');
-    const message = $('#message-field');
     let errorCount = 0;
 
-    if(!validate('firstName','First name', true, "text")) {errorCount++};
-    if(!validate('lastName','Last name', true,"text")) {errorCount++};
-    if(!validate('email','Email', true, "email")) {errorCount++}; 
-    if(!validate('telephone','Telephone', false, 'phone')) {errorCount++};
-    if(!validate('subject','Subject', true, "text")) {errorCount++};
-    if(!validate('message-field','Message', true, "text")) {errorCount++};
+    if(!validate('firstName','First name', true, "text")) {errorCount++;}
+    if(!validate('lastName','Last name', true,"text")) {errorCount++;}
+    if(!validate('email','Email', true, "email")) {errorCount++;}
+    if(!validate('telephone','Telephone', false, 'phone')) {errorCount++;}
+    if(!validate('subject','Subject', true, "text")) {errorCount++;}
+    if(!validate('message-field','Message', true, "text")) {errorCount++;}
 
 
     if(errorCount > 0){
