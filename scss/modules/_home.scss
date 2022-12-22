@@ -140,9 +140,15 @@ $halfInnerHeight: var(--app-height) / 2;
         color: $body-color;
     }
     & .contact-number{
-        font-size: 1.15rem;
+        font-size: 1rem;
         font-weight: 600;
         overflow-wrap: break-word;
+        & a{
+            color:$primary-color;
+            &:hover{
+                text-decoration: underline;
+            }            
+        }
     }
 
     & .success{
