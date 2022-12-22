@@ -12,6 +12,7 @@
         <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet'>
         <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
         
+        
         <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
@@ -21,6 +22,8 @@
         <meta name="theme-color" content="#ffffff">
 
         <link rel="stylesheet" href="css/application.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
+
     </head>
     <body class="grid">
         <!-- Sidebar Nav-->
@@ -76,19 +79,79 @@
             </div>
             <div id="scs-scheme" class="scs-scheme">
                 <h3>SASS Mixin</h3>
-                <img src="images/sass-mixin.jpg" alt="SASS Mixin">
+                <pre>
+                    <code class="language-css">
+                        @mixin triangle($color: null, $size: 90px) {
+                            width: 0;
+                            height: 0;
+                            content: '';
+                            z-index: 1;
+                            border-style: solid;
+                            border-width: 35px $size 0;
+                            z-index:4;
+                            @if($color != null){
+                                border-color: $color transparent transparent;
+                            }
+                        }
+                    </code>     
+                </pre>
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
                 
                 <h3>SASS Loop</h3>
-                <img src="images/sass-loop.jpg" alt="SASS Loop">
+                <pre>
+                    <code class="language-css">
+                        @mixin triangle($color: null, $size: 90px) {
+                            width: 0;
+                            height: 0;
+                            content: '';
+                            z-index: 1;
+                            border-style: solid;
+                            border-width: 35px $size 0;
+                            z-index:4;
+                            @if($color != null){
+                                border-color: $color transparent transparent;
+                            }
+                        }
+                    </code>     
+                </pre>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                 
                 <h3>SASS Mixin</h3>
-                <img src="images/sass-mixin.jpg" alt="SASS Mixin">
+                <pre>
+                    <code class="language-css">
+                        @mixin triangle($color: null, $size: 90px) {
+                            width: 0;
+                            height: 0;
+                            content: '';
+                            z-index: 1;
+                            border-style: solid;
+                            border-width: 35px $size 0;
+                            z-index:4;
+                            @if($color != null){
+                                border-color: $color transparent transparent;
+                            }
+                        }
+                    </code>     
+                </pre>
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
                 
                 <h3>SASS Loop</h3>
-                <img src="images/sass-loop.jpg" alt="SASS Loop">
+                <pre>
+                    <code class="language-css">
+                        @mixin triangle($color: null, $size: 90px) {
+                            width: 0;
+                            height: 0;
+                            content: '';
+                            z-index: 1;
+                            border-style: solid;
+                            border-width: 35px $size 0;
+                            z-index:4;
+                            @if($color != null){
+                                border-color: $color transparent transparent;
+                            }
+                        }
+                    </code>     
+                </pre>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             </div>
 
@@ -103,6 +166,9 @@
         </main>
         <script src="https://kit.fontawesome.com/efff71aefd.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+        
         <script src="js/typewriter.js"></script>
         <script src="js/main.js"></script>
         <script src="js/coding-examples.js"></script>
