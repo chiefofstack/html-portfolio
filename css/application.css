@@ -1116,7 +1116,7 @@ p {
   content: "";
   z-index: 1;
   display: block;
-  background-color: #93611c;
+  background-color: #bf8431;
   margin: 0;
 }
 
@@ -1132,7 +1132,7 @@ p {
   width: 100%;
   display: block;
   text-transform: uppercase;
-  color: #93611c;
+  color: #bf8431;
   font-weight: 600;
   font-family: "EB Garamond", "serif";
 }
@@ -1171,6 +1171,9 @@ p {
   justify-content: center;
   color: #3a2a14;
 }
+.social .btn:hover {
+  background-color: #bf8431;
+}
 
 @media (min-width: 768px) {
   .sidebar {
@@ -1191,7 +1194,7 @@ p {
     content: "";
     z-index: 1;
     display: block;
-    background-color: #93611c;
+    background-color: #bf8431;
   }
   .nav__item {
     border: none;
@@ -1473,9 +1476,15 @@ p {
   color: #6d736f;
 }
 .card-contact .contact-number {
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 600;
   overflow-wrap: break-word;
+}
+.card-contact .contact-number a {
+  color: #cd942b;
+}
+.card-contact .contact-number a:hover {
+  text-decoration: underline;
 }
 .card-contact .success {
   color: #38cc64;
@@ -1683,31 +1692,34 @@ p {
 }
 
 .scs-scheme {
-  padding-bottom: 50px;
+  padding: 0 2rem 3rem;
 }
 .scs-scheme h3 {
   color: #cd942b;
-  margin: 3rem 1.25rem 0;
+  margin: 3rem 0 0;
   font-size: 1.3rem;
   letter-spacing: 1px;
   width: 100%;
 }
 .scs-scheme p {
-  margin: 1.25rem;
+  margin: 1.25rem 0;
   color: #6d736f;
 }
 .scs-scheme img {
-  margin: 1.25rem 1.25rem 0;
+  margin: 1.25rem 0 0;
   border: 5px solid #383e3a;
   width: 80%;
   max-width: 800px;
 }
+.scs-scheme pre {
+  min-width: 100%;
+}
 .scs-scheme .btn {
-  margin: 0 1.25rem 1.25rem;
+  margin: 0 0 1.25rem;
 }
 .scs-scheme ul {
   width: 100%;
-  margin: 1.25rem;
+  margin: 1.25rem 0;
 }
 
 /*# sourceMappingURL=application.css.map */
