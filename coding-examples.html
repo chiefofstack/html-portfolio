@@ -270,6 +270,25 @@
                 </pre>
                 <p>This is a simple example of a reusable mixin in SASS which I call on other class styles. I added a size parameter to accomodate different widths and also color for custom colors as needed. </p>
                                 
+                <h3>Simple SQL Subquery</h3>
+                
+                <img src="images/movie-database.png" alt="Movie Database">
+                <pre>
+                    <code class="language-sql">
+                        SELECT movie_title, mov_time FROM movie 
+                        WHERE mov_id IN(
+                            SELECT mov_id FROM movie_genres 
+                            WHERE gen_id IN (
+                                SELECT gen_id FROM genres 
+                                WHERE gen_title = ‘Comedy’)
+                            ) 
+                        AND mov_time <= 120
+                    </code>     
+                </pre>
+                <p> 
+                   <b>Objective:</b> Above is a simple SQL sub-query I made to select all comedy movies that have a run time no longer than 2 hours, display title and run time columns. <br>
+                   <b>Breakdown:</b> On the innermost select statement, I simply retrieved the gen_id of 'Comedy' from the genres table. I then used that gen_id to get all the movies from the movie_genres table. And finally on the last query, I used all the mov_id to get the title and mov_time</p>
+                                
             </div>
 
             <div class="footer">
