@@ -77,7 +77,7 @@
                         Coding Examples
                     </h1>                
             </div>
-            <div id="scs-scheme" class="scs-scheme">
+            <div id="coding-examples" class="coding-examples">
                 <h3>Laravel Trait</h3>
                 <pre>
                     <code class="language-php">
@@ -270,24 +270,36 @@
                 </pre>
                 <p>This is a simple example of a reusable mixin in SASS which I call on other class styles. I added a size parameter to accomodate different widths and also color for custom colors as needed. </p>
                                 
-                <h3>Simple SQL Subquery</h3>
-                
-                <img src="images/movie-database.png" alt="Movie Database">
+                <h3>Simple SQL Subquery</h3>                
+                <p> 
+                    The objective of this simple SQL sub-query is to find all movies of type comedy which only run 2 hours or less, it should display the movie title and run-time columns. <br>
+                </p>
                 <pre>
                     <code class="language-sql">
-                        SELECT movie_title, mov_time FROM movie 
+                        SELECT mov_title, mov_time FROM movie 
                         WHERE mov_id IN(
                             SELECT mov_id FROM movie_genres 
                             WHERE gen_id IN (
                                 SELECT gen_id FROM genres 
-                                WHERE gen_title = ‘Comedy’)
+                                WHERE gen_title = 'Comedy')
                             ) 
                         AND mov_time <= 120
                     </code>     
-                </pre>
+                </pre>                
                 <p> 
-                   <b>Objective:</b> Above is a simple SQL sub-query I made to select all comedy movies which only run 2 hours or less, it displays the title and run time columns. <br>
-                   <b>Breakdown:</b> On the innermost select statement, I simply retrieved the gen_id of 'Comedy' from the genres table. I then used that gen_id to get all the movies from the movie_genres table. And finally on the last query, I used all the mov_id to get the title and mov_time</p>
+                    <b>Breakdown:</b> On the innermost select statement, I simply retrieved the gen_id of 'Comedy' from the genres table. I then used that gen_id to get all the movies that have that genre from the movie_genres table. On the last query, I used all the mov_ids to get the titles and mov_times, and also where I used the mov_time to filter out movies that are greater than 120 minutes (2 hours).
+                </p>
+                
+                <img src="images/result.jpg" class="result" alt="Query result">
+                <p> 
+                   <b>Result:</b> After running the SQL code on the online editor, this is the result. <br>
+                </p>
+
+                <img src="images/movie-database.png" alt="Movie Database"><br>
+                <p> 
+                   <b>Database:</b> This is the database from w3resource for reference. <br>
+                </p>
+
                                 
             </div>
 
