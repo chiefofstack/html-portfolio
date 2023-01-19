@@ -1663,22 +1663,39 @@ p {
   background-color: #d5d5d3;
 }
 
+.coding-examples {
+  padding: 0 2rem 3rem;
+}
 .coding-examples h3 {
   color: #cd942b;
-  margin: 3rem 1.25rem 0;
+  margin: 3rem 0 0;
   font-size: 1.3rem;
   letter-spacing: 1px;
   width: 100%;
 }
 .coding-examples p {
-  margin: 1.25rem;
+  margin: 1.25rem 0;
   color: #6d736f;
+  width: 100%;
 }
 .coding-examples img {
-  margin: 1.25rem;
+  margin: 1.25rem 0 0;
   border: 5px solid #383e3a;
   width: 80%;
   max-width: 800px;
+}
+.coding-examples img.result {
+  width: 200px;
+}
+.coding-examples pre {
+  min-width: 100%;
+}
+.coding-examples .btn {
+  margin: 0 0 1.25rem;
+}
+.coding-examples ul {
+  width: 100%;
+  margin: 1.25rem 0;
 }
 
 .scs-scheme {
