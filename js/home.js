@@ -20,9 +20,7 @@ typewriter.typeString("Hey! My name is Mark Acab. ")
 
 
 // Contact form validation
-// returns true if input is valid 
-
-
+// validate - returns true if input is valid 
 function validate(field, label, required, type){
     const inputField = $(`#${field}`);    
     const namePattern = /^[a-zA-Z-\s']*$/; 
