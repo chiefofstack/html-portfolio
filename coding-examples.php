@@ -1,32 +1,7 @@
-<!DOCTYPE html>
-<html lang="zxx">
-    <head>
-        <title>Coding Examples - HTML Portfolio by Mark Jason Acab - Using CSS Grid and Flexbox</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">   
-        <meta charset="utf-8">    
-        
-        <meta content="Coding Examples" name="title">
-        <meta content="PHP, Javascript, Laravel, SASS, VueJS, Bootstrap, HTML" name="keywords">
-        <meta content="Coding examples on my recent works in the Scion Coalition Scheme Bootcamp and my previous work as a Web Developer" name="description">
-
-        <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet'>
-        <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
-        
-        
-        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-        <link rel="manifest" href="images/favicon/site.webmanifest">
-        <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
-
-        <link rel="stylesheet" href="css/application.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
-
-    </head>
-    <body class="grid">
-        <?php require 'includes/sidebar.php'; ?>
+<?php
+$currentPage = "Coding Examples";
+include 'layout/header.php';
+?>
 
         <!-- Main Content -->
         <main class="content">
@@ -270,14 +245,6 @@
             </div>
 
         </main>
-        <script src="https://kit.fontawesome.com/efff71aefd.js" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
-        
-        <script src="js/typewriter.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/coding-examples.js"></script>
-    </body>
-</html>
+<?php
+include 'layout/footer.php';
+?>

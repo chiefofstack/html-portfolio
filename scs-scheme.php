@@ -1,29 +1,7 @@
-<!DOCTYPE html>
-<html lang="zxx">
-    <head>
-        <title>SCS Scheme - HTML Portfolio by Mark Jason Acab - Using CSS Grid and Flexbox</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">   
-        <meta charset="utf-8">
-            
-        <meta content="Scions Coalition Scheme" name="title">
-        <meta content="SCS, Scions, Coalition, Scheme, HTML, CSS, Portfolio" name="keywords">
-        <meta content="The Scion Coalition Scheme is an intensive, specially tailored training program run by Netmatters in order to give willing candidates the opportunity to enter the industry as web developers " name="description">
-
-        <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet'>
-        <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
-
-        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-        <link rel="manifest" href="images/favicon/site.webmanifest">
-        <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
-
-        <link rel="stylesheet" href="css/application.css">
-    </head>
-    <body class="grid">
-        <?php require 'includes/sidebar.php'; ?>
+<?php
+$currentPage = "SCS Scheme";
+include 'layout/header.php';
+?>
 
         <!-- Main Content -->
         <main class="content">
@@ -71,10 +49,6 @@
             </div>
 
         </main>
-        <script src="https://kit.fontawesome.com/efff71aefd.js" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="js/typewriter.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/scs-scheme.js"></script>
-    </body>
-</html>
+<?php
+include 'layout/footer.php';
+?>
