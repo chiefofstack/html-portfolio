@@ -156,8 +156,13 @@ $halfInnerHeight: var(--app-height) / 2;
         font-weight:bold;
     }
     
-    & .not-success{
+    & .danger{
         color: $red;
+        font-weight:bold;
+    }
+
+    & .warning{
+        color: $primary-color;
         font-weight:bold;
     }
 }
@@ -166,6 +171,7 @@ $halfInnerHeight: var(--app-height) / 2;
     margin: 1.25rem;
     & .btn{
         margin-left:0;
+        border: none;
     }
 }
 
