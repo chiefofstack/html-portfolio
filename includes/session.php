@@ -21,95 +21,102 @@ class sessionObject{
                 $post[$key] = filter_var( $value, FILTER_SANITIZE_EMAIL );
             }
             else{
-                $post[$key] = filter_var( $value, FILTER_SANITIZE_STRING );
+                $post[$key] = filter_var( $value, FILTER_SANITIZE_SPECIAL_CHARS );
             }
         }
         return $post;
     }
 
-    public function enquire($name,$company,$email,$telephone,$subject,$message,$optIn){
+    public function sendMessage($firstName,$lastName,$email,$telephone,$subject,$message){
         global $form, $dbConnection;
 
         /* Validate inputs */
 
-        // Name error checking
-        $field = "name";  
-        if(!$name || strlen($name = trim($name)) == 0){
-            $form->setError($field, "* Name not entered");
+        // firstName error checking
+        $field = "firstName";  
+        if(!$firstName || strlen($firstName = trim($firstName)) == 0){
+            $form->setError($field, "* First name is required");
         }
         else{
-            $name = stripslashes($name);
-            if(strlen($name) < 2){
-                $form->setError($field, "* Name below 2 characters");
+            $firstName = stripslashes($firstName);
+            if(strlen($firstName) < 2){
+                $form->setError($field, "* First name too short");
             }
-            else if(strlen($name) > 150){
-                $form->setError($field, "* Name above 150 characters");
+            else if(strlen($firstName) > 35){
+                $form->setError($field, "* First name too long");
             }
             /* Check if name is not alphanumeric */
-            else if(!preg_match("/^[\w\-\s\.\,]+$/", $name)){
-                $form->setError($field, "* Name not alphanumeric");
+            else if(!preg_match("/^[a-zA-Z-\s']*$/", $firstName)){
+                $form->setError($field, "* Please enter a valid first name");
             }            
         }
  
-
-        // Company error checking
-        $field = "company"; 
-        if($company != NULL){
-            $company = stripslashes($company);
-            if(strlen($company) < 2){
-                $form->setError($field, "* Company below 2 characters");
+        // lastName error checking
+        $field = "lastName";  
+        if(!$lastName || strlen($lastName = trim($lastName)) == 0){
+            $form->setError($field, "* Last name is required");
+        }
+        else{
+            $lastName = stripslashes($lastName);
+            if(strlen($lastName) < 2){
+                $form->setError($field, "* Last name too short");
             }
-            else if(strlen($company) > 150){
-                $form->setError($field, "* Company above 150 characters");
+            else if(strlen($lastName) > 35){
+                $form->setError($field, "* Last name too long");
             }
-            /* Check if company is not alphanumeric */
-            else if(!preg_match("/^[\w\-\s\.\,]+$/", $company)){
-                $form->setError($field, "* Company not alphanumeric");
+            /* Check if name is not alphanumeric */
+            else if(!preg_match("/^[a-zA-Z-\s']*$/", $lastName)){
+                $form->setError($field, "* Please enter a valid last name");
             }            
         }
-
+ 
         // Email error checking 
         $field = "email"; 
         if(!$email || strlen($email = trim($email)) == 0){
-            $form->setError($field, "* Email not entered");
+            $form->setError($field, "* Email is required");
         }
         else{
-            /* Check if valid email address */
-            $regEx = "/^[_+a-z0-9-]+(\.[_+a-z0-9-]+)*"
-            ."@[a-z0-9-]+(\.[a-z0-9-]{1,})*"
-            ."\.([a-z]{2,}){1}$/i";
-            
-            if(!preg_match($regEx, $email)){
-                $form->setError($field, "* Email invalid");
-            }
             $email = stripslashes($email);
+            if(strlen($email) > 254){
+                $form->setError($field, "* Email too long");
+            }
+            /* Check if valid email address */
+            if(!preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/", $email)){
+                $form->setError($field, "* Please enter a valid email");
+            }            
         }
       
         // Telephone error checking 
         $field = "telephone"; 
         if(!$telephone || strlen($telephone = trim($telephone)) == 0){
-            $form->setError($field, "* Telephone not entered");
+            $form->setError($field, "* Telephone is required");
         }
         else{
-            if (!ctype_digit($telephone)) {
-                $form->setError($field,"Only numbers are allowed");
-            } else if(strlen($telephone) > 11){
-                $form->setError($field,"Telephone must not exceed 11 digits");
+            $telephone = stripslashes($telephone);
+            if(strlen($telephone) < 11){
+                $form->setError($field, "* Telephone too short");
             }
+            else if(strlen($telephone) > 13){
+                $form->setError($field, "* Telephone too long");
+            }
+            /* Check if name is not alphanumeric */
+            else if(!preg_match("/^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/", $telephone)){
+                $form->setError($field, "* Please enter a valid telephone");
+            }     
         }
       
         // Subject error checking
         $field = "subject";  
         if(!$subject || strlen($subject = trim($subject)) == 0){
-            $form->setError($field, "* Subject not entered");
+            $form->setError($field, "* Subject is required");
         }
         else{
             $subject = stripslashes($subject);
             if(strlen($subject) < 2){
-                $form->setError($field, "* Subject below 2 characters");
+                $form->setError($field, "* Subject too short");
             }
-            else if(strlen($subject) > 150){
-                $form->setError($field, "* Subject above 150 characters");
+            else if(strlen($subject) > 254){
+                $form->setError($field, "* Subject too long");
             }
             /* Check if subject is not alphanumeric */
             else if(!preg_match("/^[\w\-\s\.\,]+$/", $subject)){
@@ -120,22 +127,21 @@ class sessionObject{
         // Message error checking
         $field = "message";  
         if(!$message || strlen($message = trim($message)) == 0){
-            $form->setError($field, "* Message not entered");
+            $form->setError($field, "* Message is required");
         }
         else{
             $message = stripslashes($message);
             if(strlen($message) < 2){
-                $form->setError($field, "* Message below 2 characters");
+                $form->setError($field, "* Message too short");
             }
             else if(strlen($message) > 2000){
-                $form->setError($field, "* Message above 2000 characters");
+                $form->setError($field, "* Message too long");
             }
             /* Check if message is not alphanumeric */
             else if(!preg_match("/^[\w\-\s\.\,]+$/", $message)){
                 $form->setError($field, "* Message not alphanumeric");
             }            
         }
-
 
         // If errors found show form again with error messages, else save to database
         if($form->errorCount > 0 ){
@@ -147,7 +153,7 @@ class sessionObject{
                 return -1; // -1 = connection error
                 
             }else{
-                $result = $dbConnection->saveEnquiry($name, $company, $email, $telephone, $subject, $message, $optIn);
+                $result = $dbConnection->saveMessage($firstName, $lastName, $email, $telephone, $subject, $message);
                 if(!$result){
                     return -2; // -2 = error while saving
                 }
