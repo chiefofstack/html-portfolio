@@ -1,5 +1,6 @@
 <?php
 $currentPage = "Home";
+include 'includes/session.php';
 include 'layout/header.php';
 ?>
 
@@ -71,36 +72,109 @@ include 'layout/header.php';
                                 </div>
                                 <div class="col-12 col-lg-6">
                                     <h3>Send Me A Message</h3>
-                                    <p class="form-message">* Required</p>                                    
+                                    <?php 
+                                    $message = "";
+                                    $messageColor = "";
+                                    if(isset($_SESSION['success'])) { 
+                                        switch($_SESSION['success']){
+                                            case 0: 
+                                                $message = "There were errors found in the form."; 
+                                                $messageColor = "danger";
+                                                break;
+                                            case -1: 
+                                                $message = "Could not connect to the database."; 
+                                                $messageColor = "warning";
+                                                break;
+                                            case -2: 
+                                                $message = "Could not save to the database"; 
+                                                $messageColor = "warning";
+                                                break;
+                                            case 1: 
+                                                $message = "Thanks ".$_SESSION['name'].", your message has been sent!"; 
+                                                $messageColor = "success";
+                                                break;
+                                        }
+                                    } else {
+                                        $message = "* Required";
+                                    }
+                                    ?>                                    
+                                    <p class="form-message <?php echo $messageColor; ?>"><?php echo $message; ?></p>
+
                                     <div class="contact-form">
-                                        <form method="post">
+                                        <form action="process.php" method="post">
+                                            <input type="hidden" name="sendMessage" value="1">
                                             <div class="input-fields">
                                                 <div class="form-group">
-                                                    <input type="text" id="firstName" name="firstName" class="input-field" placeholder="First Name *">
-                                                    <span class="input-error"></span>
+                                                    <input 
+                                                        type="text" 
+                                                        id="firstName" 
+                                                        name="firstName" 
+                                                        class="input-field <?php if($form->getError('firstName')) echo "input-field-error"; ?>" 
+                                                        placeholder="First Name *" 
+                                                        value="<?php echo $form->getValue('firstName'); ?>"
+                                                    >
+                                                    <span class="input-error"><?php echo $form->getError('firstName'); ?></span>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="text" id="lastName" name="lastName" class="input-field" placeholder="Last Name *">
-                                                    <span class="input-error"></span>
+                                                    <input 
+                                                        type="text" 
+                                                        id="lastName" 
+                                                        name="lastName" 
+                                                        class="input-field <?php if($form->getError('lastName')) echo "input-field-error"; ?>" 
+                                                        placeholder="Last Name *" 
+                                                        value="<?php echo $form->getValue('lastName'); ?>"
+                                                    >
+                                                    <span class="input-error"><?php echo $form->getError('lastName'); ?></span>
                                                 </div>
                                             </div>           
                                             <div class="form-group">
-                                                <input type="text" id="email" name="email" class="input-field" placeholder="Email *  (ex. name@email.com)">
-                                                <span class="input-error"></span>
+                                                <input 
+                                                    type="text" 
+                                                    id="email" 
+                                                    name="email" 
+                                                    class="input-field <?php if($form->getError('email')) echo "input-field-error"; ?>" 
+                                                    placeholder="Email *  (ex. name@email.com)" 
+                                                    value="<?php echo $form->getValue('email'); ?>"
+                                                >
+                                                <span class="input-error"><?php echo $form->getError('email'); ?></span>                                                
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" id="telephone" name="telephone" class="input-field" placeholder="Telephone (ex. +447471434452, 07471434452)">
-                                                <span class="input-error"></span>
+                                                <input 
+                                                    type="text" 
+                                                    id="telephone" 
+                                                    name="telephone" 
+                                                    class="input-field <?php if($form->getError('telephone')) echo "input-field-error"; ?>" 
+                                                    placeholder="Telephone (ex. +447471434452, 07471434452)"
+                                                    value="<?php echo $form->getValue('telephone'); ?>"
+                                                >
+                                                <span class="input-error"><?php echo $form->getError('telephone'); ?></span>
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" id="subject" name="subject" class="input-field" placeholder="Subject *">
-                                                <span class="input-error"></span>
+                                                <input 
+                                                    type="text" 
+                                                    id="subject" 
+                                                    name="subject" 
+                                                    class="input-field <?php if($form->getError('subject')) echo "input-field-error"; ?>" 
+                                                    placeholder="Subject *"
+                                                    value="<?php echo $form->getValue('subject'); ?>"
+                                                >
+                                                <span class="input-error"><?php echo $form->getError('subject'); ?></span>
                                             </div>
                                             <div class="form-group">
-                                                <textarea id="message-field" name="message-field" class="message-field input-field" placeholder="Message *" rows="10"></textarea>
-                                                <span class="input-error"></span>
+                                                <textarea 
+                                                    id="message-field" 
+                                                    name="message-field" 
+                                                    class="message-field input-field <?php if($form->getError('message')) echo "input-field-error"; ?>" 
+                                                    placeholder="Message *" 
+                                                    rows="10"
+                                                ><?php echo $form->getValue('message'); ?></textarea>
+                                                <span class="input-error"><?php echo $form->getError('message'); ?></span>
                                             </div>
-                                            <a href="#" id="sendMessage" class="btn btn-sm btn-read-more">Send Message<i class="fa fa-paper-plane"></i></a>
+                                            <button type="submit" class="btn btn-sm btn-read-more">Send Message<i class="fa fa-paper-plane"></i></button>
+                                            <?php 
+                                            /* Comment out link to disable client side validation*/
+                                            // echo '<a href="#" id="sendMessage" class="btn btn-sm btn-read-more">Send Message<i class="fa fa-paper-plane"></i></a>';
+                                            ?>                                     
                                         </form>               
                                     </div>
                                 </div>
