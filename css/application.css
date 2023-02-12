@@ -1490,8 +1490,12 @@ p {
   color: #38cc64;
   font-weight: bold;
 }
-.card-contact .not-success {
+.card-contact .danger {
   color: #ff0000;
+  font-weight: bold;
+}
+.card-contact .warning {
+  color: #cd942b;
   font-weight: bold;
 }
 
@@ -1500,6 +1504,7 @@ p {
 }
 .contact-form .btn {
   margin-left: 0;
+  border: none;
 }
 
 .input-fields {
