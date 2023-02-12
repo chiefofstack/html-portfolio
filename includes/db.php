@@ -25,10 +25,10 @@ class databaseObject{
 
     }
 
-    // save enquiry to table
-    public function saveEnquiry($name, $company, $email, $telephone, $subject, $message, $optIn){
+    // save message to table
+    public function saveMessage($firstName, $lastName, $email, $telephone, $subject, $message){
         try {
-            $query = $this->connection->prepare("INSERT into `enquiries` (`name`, `company`, `email`, `telephone`, `subject`, `message`, `optin` ) VALUES ('$name','$company','$email', '$telephone', '$subject', '$message', '$optIn')");
+            $query = $this->connection->prepare("INSERT into `messages` (`first_name`, `last_name`, `email`, `telephone`, `subject`, `message` ) VALUES ('$firstName','$lastName','$email', '$telephone', '$subject', '$message')");
             $query->execute();
         } catch (Exception $e) {
             error_log($e->getMessage());
@@ -39,10 +39,10 @@ class databaseObject{
         return 1;
     }
 
-    // returns an array of enquiries from the database query
-    public function getEnquiries(){
+    // returns an array of messages from the database query
+    public function getMessages(){
         try {
-            $query = $this->connection->prepare('SELECT * FROM enquiries ORDER BY id ASC ');
+            $query = $this->connection->prepare('SELECT * FROM messages ORDER BY id ASC ');
             $query->execute();
             $results = $query->fetchAll();
             return $results;
