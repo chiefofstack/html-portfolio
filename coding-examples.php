@@ -11,6 +11,200 @@ include 'layout/header.php';
                     </h1>                
             </div>
             <div id="coding-examples" class="coding-examples">
+            <h3>Back-end validation with PHP</h3>
+                <pre>
+                    <code class="language-php">
+                        public function sendMessage($firstName,$lastName,$email,$telephone,$subject,$message){
+                        global $form, $dbConnection;
+
+                        /* Validate inputs */
+
+                        // firstName error checking
+                        $field = "firstName";  
+                        if(!$firstName || strlen($firstName = trim($firstName)) == 0){
+                            $form->setError($field, "* First name is required");
+                        }
+                        else{
+                            $firstName = stripslashes($firstName);
+                            if(strlen($firstName) < 2){
+                                $form->setError($field, "* First name too short");
+                            }
+                            else if(strlen($firstName) > 35){
+                                $form->setError($field, "* First name too long");
+                            }
+                            /* Check if name is not alphanumeric */
+                            else if(!preg_match("/^[a-zA-Z-\s']*$/", $firstName)){
+                                $form->setError($field, "* Please enter a valid first name");
+                            }            
+                        }
+                
+                
+                        // Email error checking 
+                        $field = "email"; 
+                        if(!$email || strlen($email = trim($email)) == 0){
+                            $form->setError($field, "* Email is required");
+                        }
+                        else{
+                            $email = stripslashes($email);
+                            if(strlen($email) > 254){
+                                $form->setError($field, "* Email too long");
+                            }
+                            /* Check if valid email address */
+                            if(!preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/", $email)){
+                                $form->setError($field, "* Please enter a valid email");
+                            }            
+                        }
+                    
+                        // Telephone error checking 
+                        $field = "telephone"; 
+                        if(!$telephone || strlen($telephone = trim($telephone)) == 0){
+                            $form->setError($field, "* Telephone is required");
+                        }
+                        else{
+                            $telephone = stripslashes($telephone);
+                            if(strlen($telephone) < 11){
+                                $form->setError($field, "* Telephone too short");
+                            }
+                            else if(strlen($telephone) > 13){
+                                $form->setError($field, "* Telephone too long");
+                            }
+                            /* Check if name is not alphanumeric */
+                            else if(!preg_match("/^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/", $telephone)){
+                                $form->setError($field, "* Please enter a valid telephone");
+                            }     
+                        }                    
+
+                        // Message error checking
+                        $field = "message";  
+                        if(!$message || strlen($message = trim($message)) == 0){
+                            $form->setError($field, "* Message is required");
+                        }
+                        else{
+                            $message = stripslashes($message);
+                            if(strlen($message) < 2){
+                                $form->setError($field, "* Message too short");
+                            }
+                            else if(strlen($message) > 2000){
+                                $form->setError($field, "* Message too long");
+                            }
+                            /* Check if message is not alphanumeric */
+                            else if(!preg_match("/^[\w\-\s\.\,]+$/", $message)){
+                                $form->setError($field, "* Message not alphanumeric");
+                            }            
+                        }
+
+                        // If errors found show form again with error messages, else save to database
+                        if($form->errorCount > 0 ){
+                            return 0; // 0 = have validation errors
+                        }
+                        else{
+                            if($dbConnection->error)
+                            {   
+                                return -1; // -1 = connection error
+                                
+                            }else{
+                                $result = $dbConnection->saveMessage($firstName, $lastName, $email, $telephone, $subject, $message);
+                                if(!$result){
+                                    return -2; // -2 = error while saving
+                                }
+                                else{
+                                    return 1; // success!
+                                }
+                            }
+                        }
+                    }
+                    </code>     
+                </pre>
+                <p>This method accepts input fields, and saves it to the database if it passes validation. Otherwise it returns the errors and values back to the form.
+                    This method resides inside a "session class" that has other methods such as filterInputs() and is used in conjuction with a "form class" that handle how to return errors and values back to the form. 
+                </p>        
+
+                
+                <h3>Front-end validation with Javascript</h3>
+                <pre>
+                    <code class="language-js">
+                    function validate(field, label, required, type){
+                        const inputField = $(`#${field}`);    
+                        const namePattern = /^[a-zA-Z-\s']*$/; 
+                        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; 
+                        const phonePattern = /^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/; //UK phone regex , 
+                        const textPattern = /^[\w\-\s\.\,]+$/; 
+                        
+                        let error = false;
+                        // If required and empty, show error and return false right away.
+                        if (required && inputField.val() == ""){ 
+                            inputField.addClass('input-field-error');
+                            inputField.siblings('.input-error').text(`${label} is required`);
+                            return false;       
+                        }
+                        
+                        // Check lengths and patterns
+                        // Name
+                        if(type == 'name'){        
+                            if (inputField.val().length > 35) {
+                                error =  `${label} is too long`;
+                            } 
+                            else if (inputField.val().length  < 2) {
+                                error =  `${label} is too short`;
+                            }
+                            else if(!namePattern.test(inputField.val().trim())){
+                                error = `Please enter a valid ${label}`;
+                            }
+
+                        }
+                        // Email
+                        else if(type == 'email'){
+                            if (inputField.val().length > 254) {
+                                error =  `${label} is too long`;
+                            } 
+                            else if(!emailPattern.test(inputField.val().trim())){
+                                error = `Please enter a valid ${label}`;
+                            } 
+                        }
+                        // Phone
+                        else if(type == 'phone'){
+                            if (inputField.val().length > 13) {
+                                error =  `${label} is too long`;
+                            } 
+                            else if (inputField.val().length  < 11) {
+                                error =  `${label} is too short`;
+                            }
+                            else if(!phonePattern.test(inputField.val().trim())){
+                                error = `Please enter a valid ${label}`;
+                            } 
+                        }
+                        // Subject
+                        else if(type == 'subject'){
+                            if (inputField.val().length > 254) {
+                                error =  `${label} is too long`;
+                            } 
+                            else if (inputField.val().length  < 2) {
+                                error =  `${label} is too short`;
+                            }
+                            else if(!textPattern.test(inputField.val().trim())){
+                                error = `${label} not alphanumeric`;
+                            } 
+                        }
+
+                        // Show and return result
+                        if(error){
+                            inputField.addClass('input-field-error');
+                            inputField.siblings('.input-error').text(error);
+                            return false;        
+                        }
+                        else{
+                            inputField.removeClass('input-field-error');
+                            inputField.siblings('.input-error').text('');
+                            return true;
+                        }
+                        
+                    }
+                    </code>     
+                </pre>
+                <p>The validate() method accepts the type of field to be tested and returns true if the input is valid and false otherwise. Input fields are tested for string length and compared to a pattern. 
+                    I used this together with jQuery on('input') event to fire the validation as the user types on the field. 
+                </p>           
+
                 <h3>Laravel Trait</h3>
                 <pre>
                     <code class="language-php">
