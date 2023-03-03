@@ -74,9 +74,9 @@ include 'layout/header.php';
                                     <p>Please feel free to contact me by telephone or email and I will be sure to get back to you as soon as possible. </p>
                                     <p class="contact-number">
                                         <a href="tel:07479879607">07479879697</a><br>
-                                        <span class="email-address"><a href="mailto:mark@netmatters-scs.co.uk">mark@netmatters-scs.co.uk</a></span>
+                                        <span class="email-address"><a href="mailto:mark.acab@netmatters-scs.co.uk">mark.acab@netmatters-scs.co.uk</a></span>
                                     </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                    <p>"A water bottle at the store cost $1. The same bottle at a hotel is $3. At an airport $5. Same bottle, same brand. The only thing that changed is the place. If ever you feel unappreciated, worthless, or undervalued remember that each place gives a different value to the same things."</p>
                                 </div>
                                 <div class="col-12 col-lg-6">
                                     <h3>Send Me A Message</h3>
