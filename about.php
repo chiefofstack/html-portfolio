@@ -12,12 +12,16 @@ include 'layout/header.php';
             </div>
             <div id="about" class="about"> 
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 col-xl-10 offset-xl-1 ">
                         <div class="card card-about">
                             <div class="row">
                                 <div class="col-12 col-lg-7 col-xl-8">
                                     <div class="top-pic">
-                                        <img src="images/mark-jason-acab.jpg" alt="Mark Jason Acab">
+                                        <div class="row">
+                                            <div class="col-xs-8 offset-xs-2">
+                                                <img src="images/mark-jason-acab.jpg" alt="Mark Jason Acab">
+                                            </div>
+                                        </div>        
                                     </div>
                                     <h3>About Me</h3>
                                     <p>Hi! I have a Bachelor’s Degree in Computing and I majored in Computer Science. I’m looking to secure a role in web development. 
@@ -36,7 +40,9 @@ include 'layout/header.php';
                                     <p>PHP, Javascript, CSS, SASS, jQuery, Vue, Laravel, cPanel, AWS, Docker, Wordpress </p>
                                 </div>
                                 <div class="col-12 col-lg-5 col-xl-4">
-                                    <img src="images/mark-jason-acab.jpg" alt="Mark Jason Acab" class="right-pic">
+                                    <div class="right-pic">
+                                        <img src="images/mark-jason-acab.jpg" alt="Mark Jason Acab" >
+                                    </div>
                                 </div>
                             </div>
                         </div>

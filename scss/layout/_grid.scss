@@ -39,6 +39,7 @@ $innerHeight: var(--app-height);
 }
 
 //Define column widths for all breakpoints ex. col-lg-12, col-lg-11, col-lg-10 etc
+//Define column offsets for all breakpoints ex. offset-md-4 etc.
 @each $breakpoint, $pixels in $breakpoints {
     @media(min-width: #{$pixels}){
         @each $colCount, $percentage in $columnWidths {           
@@ -49,9 +50,15 @@ $innerHeight: var(--app-height);
                 flex-basis: auto;
                 width: $percentage;
             }
+
+            .offset-#{$breakpoint}-#{$colCount} {
+                margin-left: $percentage;
+            }
+
         }
     }
 }
+
 
 // Sidebar height on mobile  
 @media(max-width: map.get($breakpoints, "md")){
