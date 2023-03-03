@@ -549,12 +549,18 @@ p {
     flex-basis: auto;
     width: 8.33%;
   }
+  .offset-xs-1 {
+    margin-left: 8.33%;
+  }
   .col-xs-2 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 16.66%;
+  }
+  .offset-xs-2 {
+    margin-left: 16.66%;
   }
   .col-xs-3 {
     flex: 0 0 auto;
@@ -563,12 +569,18 @@ p {
     flex-basis: auto;
     width: 25%;
   }
+  .offset-xs-3 {
+    margin-left: 25%;
+  }
   .col-xs-4 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 33.33%;
+  }
+  .offset-xs-4 {
+    margin-left: 33.33%;
   }
   .col-xs-5 {
     flex: 0 0 auto;
@@ -577,12 +589,18 @@ p {
     flex-basis: auto;
     width: 41.66%;
   }
+  .offset-xs-5 {
+    margin-left: 41.66%;
+  }
   .col-xs-6 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 50%;
+  }
+  .offset-xs-6 {
+    margin-left: 50%;
   }
   .col-xs-7 {
     flex: 0 0 auto;
@@ -591,12 +609,18 @@ p {
     flex-basis: auto;
     width: 58.34%;
   }
+  .offset-xs-7 {
+    margin-left: 58.34%;
+  }
   .col-xs-8 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 66.66%;
+  }
+  .offset-xs-8 {
+    margin-left: 66.66%;
   }
   .col-xs-9 {
     flex: 0 0 auto;
@@ -605,12 +629,18 @@ p {
     flex-basis: auto;
     width: 75%;
   }
+  .offset-xs-9 {
+    margin-left: 75%;
+  }
   .col-xs-10 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 83.33%;
+  }
+  .offset-xs-10 {
+    margin-left: 83.33%;
   }
   .col-xs-11 {
     flex: 0 0 auto;
@@ -619,12 +649,18 @@ p {
     flex-basis: auto;
     width: 91.66%;
   }
+  .offset-xs-11 {
+    margin-left: 91.66%;
+  }
   .col-xs-12 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 100%;
+  }
+  .offset-xs-12 {
+    margin-left: 100%;
   }
 }
 @media (min-width: 576px) {
@@ -635,12 +671,18 @@ p {
     flex-basis: auto;
     width: 8.33%;
   }
+  .offset-sm-1 {
+    margin-left: 8.33%;
+  }
   .col-sm-2 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 16.66%;
+  }
+  .offset-sm-2 {
+    margin-left: 16.66%;
   }
   .col-sm-3 {
     flex: 0 0 auto;
@@ -649,12 +691,18 @@ p {
     flex-basis: auto;
     width: 25%;
   }
+  .offset-sm-3 {
+    margin-left: 25%;
+  }
   .col-sm-4 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 33.33%;
+  }
+  .offset-sm-4 {
+    margin-left: 33.33%;
   }
   .col-sm-5 {
     flex: 0 0 auto;
@@ -663,12 +711,18 @@ p {
     flex-basis: auto;
     width: 41.66%;
   }
+  .offset-sm-5 {
+    margin-left: 41.66%;
+  }
   .col-sm-6 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 50%;
+  }
+  .offset-sm-6 {
+    margin-left: 50%;
   }
   .col-sm-7 {
     flex: 0 0 auto;
@@ -677,12 +731,18 @@ p {
     flex-basis: auto;
     width: 58.34%;
   }
+  .offset-sm-7 {
+    margin-left: 58.34%;
+  }
   .col-sm-8 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 66.66%;
+  }
+  .offset-sm-8 {
+    margin-left: 66.66%;
   }
   .col-sm-9 {
     flex: 0 0 auto;
@@ -691,12 +751,18 @@ p {
     flex-basis: auto;
     width: 75%;
   }
+  .offset-sm-9 {
+    margin-left: 75%;
+  }
   .col-sm-10 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 83.33%;
+  }
+  .offset-sm-10 {
+    margin-left: 83.33%;
   }
   .col-sm-11 {
     flex: 0 0 auto;
@@ -705,12 +771,18 @@ p {
     flex-basis: auto;
     width: 91.66%;
   }
+  .offset-sm-11 {
+    margin-left: 91.66%;
+  }
   .col-sm-12 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 100%;
+  }
+  .offset-sm-12 {
+    margin-left: 100%;
   }
 }
 @media (min-width: 768px) {
@@ -721,12 +793,18 @@ p {
     flex-basis: auto;
     width: 8.33%;
   }
+  .offset-md-1 {
+    margin-left: 8.33%;
+  }
   .col-md-2 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 16.66%;
+  }
+  .offset-md-2 {
+    margin-left: 16.66%;
   }
   .col-md-3 {
     flex: 0 0 auto;
@@ -735,12 +813,18 @@ p {
     flex-basis: auto;
     width: 25%;
   }
+  .offset-md-3 {
+    margin-left: 25%;
+  }
   .col-md-4 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 33.33%;
+  }
+  .offset-md-4 {
+    margin-left: 33.33%;
   }
   .col-md-5 {
     flex: 0 0 auto;
@@ -749,12 +833,18 @@ p {
     flex-basis: auto;
     width: 41.66%;
   }
+  .offset-md-5 {
+    margin-left: 41.66%;
+  }
   .col-md-6 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 50%;
+  }
+  .offset-md-6 {
+    margin-left: 50%;
   }
   .col-md-7 {
     flex: 0 0 auto;
@@ -763,12 +853,18 @@ p {
     flex-basis: auto;
     width: 58.34%;
   }
+  .offset-md-7 {
+    margin-left: 58.34%;
+  }
   .col-md-8 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 66.66%;
+  }
+  .offset-md-8 {
+    margin-left: 66.66%;
   }
   .col-md-9 {
     flex: 0 0 auto;
@@ -777,12 +873,18 @@ p {
     flex-basis: auto;
     width: 75%;
   }
+  .offset-md-9 {
+    margin-left: 75%;
+  }
   .col-md-10 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 83.33%;
+  }
+  .offset-md-10 {
+    margin-left: 83.33%;
   }
   .col-md-11 {
     flex: 0 0 auto;
@@ -791,12 +893,18 @@ p {
     flex-basis: auto;
     width: 91.66%;
   }
+  .offset-md-11 {
+    margin-left: 91.66%;
+  }
   .col-md-12 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 100%;
+  }
+  .offset-md-12 {
+    margin-left: 100%;
   }
 }
 @media (min-width: 992px) {
@@ -807,12 +915,18 @@ p {
     flex-basis: auto;
     width: 8.33%;
   }
+  .offset-lg-1 {
+    margin-left: 8.33%;
+  }
   .col-lg-2 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 16.66%;
+  }
+  .offset-lg-2 {
+    margin-left: 16.66%;
   }
   .col-lg-3 {
     flex: 0 0 auto;
@@ -821,12 +935,18 @@ p {
     flex-basis: auto;
     width: 25%;
   }
+  .offset-lg-3 {
+    margin-left: 25%;
+  }
   .col-lg-4 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 33.33%;
+  }
+  .offset-lg-4 {
+    margin-left: 33.33%;
   }
   .col-lg-5 {
     flex: 0 0 auto;
@@ -835,12 +955,18 @@ p {
     flex-basis: auto;
     width: 41.66%;
   }
+  .offset-lg-5 {
+    margin-left: 41.66%;
+  }
   .col-lg-6 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 50%;
+  }
+  .offset-lg-6 {
+    margin-left: 50%;
   }
   .col-lg-7 {
     flex: 0 0 auto;
@@ -849,12 +975,18 @@ p {
     flex-basis: auto;
     width: 58.34%;
   }
+  .offset-lg-7 {
+    margin-left: 58.34%;
+  }
   .col-lg-8 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 66.66%;
+  }
+  .offset-lg-8 {
+    margin-left: 66.66%;
   }
   .col-lg-9 {
     flex: 0 0 auto;
@@ -863,12 +995,18 @@ p {
     flex-basis: auto;
     width: 75%;
   }
+  .offset-lg-9 {
+    margin-left: 75%;
+  }
   .col-lg-10 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 83.33%;
+  }
+  .offset-lg-10 {
+    margin-left: 83.33%;
   }
   .col-lg-11 {
     flex: 0 0 auto;
@@ -877,12 +1015,18 @@ p {
     flex-basis: auto;
     width: 91.66%;
   }
+  .offset-lg-11 {
+    margin-left: 91.66%;
+  }
   .col-lg-12 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 100%;
+  }
+  .offset-lg-12 {
+    margin-left: 100%;
   }
 }
 @media (min-width: 1200px) {
@@ -893,12 +1037,18 @@ p {
     flex-basis: auto;
     width: 8.33%;
   }
+  .offset-xl-1 {
+    margin-left: 8.33%;
+  }
   .col-xl-2 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 16.66%;
+  }
+  .offset-xl-2 {
+    margin-left: 16.66%;
   }
   .col-xl-3 {
     flex: 0 0 auto;
@@ -907,12 +1057,18 @@ p {
     flex-basis: auto;
     width: 25%;
   }
+  .offset-xl-3 {
+    margin-left: 25%;
+  }
   .col-xl-4 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 33.33%;
+  }
+  .offset-xl-4 {
+    margin-left: 33.33%;
   }
   .col-xl-5 {
     flex: 0 0 auto;
@@ -921,12 +1077,18 @@ p {
     flex-basis: auto;
     width: 41.66%;
   }
+  .offset-xl-5 {
+    margin-left: 41.66%;
+  }
   .col-xl-6 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 50%;
+  }
+  .offset-xl-6 {
+    margin-left: 50%;
   }
   .col-xl-7 {
     flex: 0 0 auto;
@@ -935,12 +1097,18 @@ p {
     flex-basis: auto;
     width: 58.34%;
   }
+  .offset-xl-7 {
+    margin-left: 58.34%;
+  }
   .col-xl-8 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 66.66%;
+  }
+  .offset-xl-8 {
+    margin-left: 66.66%;
   }
   .col-xl-9 {
     flex: 0 0 auto;
@@ -949,12 +1117,18 @@ p {
     flex-basis: auto;
     width: 75%;
   }
+  .offset-xl-9 {
+    margin-left: 75%;
+  }
   .col-xl-10 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 83.33%;
+  }
+  .offset-xl-10 {
+    margin-left: 83.33%;
   }
   .col-xl-11 {
     flex: 0 0 auto;
@@ -963,12 +1137,18 @@ p {
     flex-basis: auto;
     width: 91.66%;
   }
+  .offset-xl-11 {
+    margin-left: 91.66%;
+  }
   .col-xl-12 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 100%;
+  }
+  .offset-xl-12 {
+    margin-left: 100%;
   }
 }
 @media (min-width: 1400px) {
@@ -979,12 +1159,18 @@ p {
     flex-basis: auto;
     width: 8.33%;
   }
+  .offset-xxl-1 {
+    margin-left: 8.33%;
+  }
   .col-xxl-2 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 16.66%;
+  }
+  .offset-xxl-2 {
+    margin-left: 16.66%;
   }
   .col-xxl-3 {
     flex: 0 0 auto;
@@ -993,12 +1179,18 @@ p {
     flex-basis: auto;
     width: 25%;
   }
+  .offset-xxl-3 {
+    margin-left: 25%;
+  }
   .col-xxl-4 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 33.33%;
+  }
+  .offset-xxl-4 {
+    margin-left: 33.33%;
   }
   .col-xxl-5 {
     flex: 0 0 auto;
@@ -1007,12 +1199,18 @@ p {
     flex-basis: auto;
     width: 41.66%;
   }
+  .offset-xxl-5 {
+    margin-left: 41.66%;
+  }
   .col-xxl-6 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 50%;
+  }
+  .offset-xxl-6 {
+    margin-left: 50%;
   }
   .col-xxl-7 {
     flex: 0 0 auto;
@@ -1021,12 +1219,18 @@ p {
     flex-basis: auto;
     width: 58.34%;
   }
+  .offset-xxl-7 {
+    margin-left: 58.34%;
+  }
   .col-xxl-8 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 66.66%;
+  }
+  .offset-xxl-8 {
+    margin-left: 66.66%;
   }
   .col-xxl-9 {
     flex: 0 0 auto;
@@ -1035,12 +1239,18 @@ p {
     flex-basis: auto;
     width: 75%;
   }
+  .offset-xxl-9 {
+    margin-left: 75%;
+  }
   .col-xxl-10 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 83.33%;
+  }
+  .offset-xxl-10 {
+    margin-left: 83.33%;
   }
   .col-xxl-11 {
     flex: 0 0 auto;
@@ -1049,12 +1259,18 @@ p {
     flex-basis: auto;
     width: 91.66%;
   }
+  .offset-xxl-11 {
+    margin-left: 91.66%;
+  }
   .col-xxl-12 {
     flex: 0 0 auto;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
     width: 100%;
+  }
+  .offset-xxl-12 {
+    margin-left: 100%;
   }
 }
 @media (max-width: 768px) and (min-height: 0) {
@@ -1432,6 +1648,7 @@ p {
 .card {
   background-color: #ffffff;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  height: 100%;
 }
 .card img {
   width: 100%;
@@ -1442,6 +1659,9 @@ p {
 }
 .card p, .card .btn {
   margin: 1.25rem;
+}
+.card > p {
+  min-height: 73px;
 }
 
 .btn-read-more {
@@ -1464,7 +1684,6 @@ p {
 
 .card-contact {
   margin-bottom: 100px;
-  padding-bottom: 70px;
 }
 .card-contact h3 {
   color: #cd942b;
@@ -1633,9 +1852,7 @@ p {
   color: #6d736f;
 }
 .card-about img {
-  margin: 1.25rem;
   border: 5px solid #383e3a;
-  width: 80%;
 }
 
 .top-pic {
@@ -1645,6 +1862,7 @@ p {
 
 .right-pic {
   display: none;
+  margin: 3.75rem 1.25rem;
 }
 
 @media (min-width: 992px) {
@@ -1668,41 +1886,45 @@ p {
   background-color: #d5d5d3;
 }
 
-.coding-examples {
-  padding: 0 2rem 3rem;
+.coding-examples .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-.coding-examples h3 {
+.coding-examples .card h2 {
   color: #cd942b;
-  margin: 3rem 0 0;
+  margin: 1rem 0.8rem;
   font-size: 1.3rem;
   letter-spacing: 1px;
-  width: 100%;
 }
-.coding-examples p {
-  margin: 1.25rem 0;
+.coding-examples .card pre {
+  min-width: 100%;
+  height: 500px;
+  overflow: scroll;
+  border-radius: 0;
+}
+.coding-examples .card .short-pre {
+  height: 200px;
+}
+.coding-examples .card p {
+  margin: 1.25rem;
   color: #6d736f;
-  width: 100%;
 }
-.coding-examples img {
-  margin: 1.25rem 0 0;
+.coding-examples .card img {
+  margin: 0 1.25rem;
   border: 5px solid #383e3a;
   width: 80%;
   max-width: 800px;
 }
-.coding-examples img.result {
+.coding-examples .card img.result {
   width: 200px;
 }
-.coding-examples pre {
-  min-width: 100%;
-}
-.coding-examples .btn {
-  margin: 0 0 1.25rem;
-}
-.coding-examples ul {
-  width: 100%;
-  margin: 1.25rem 0;
-}
 
+@media (min-width: 768px) {
+  .coding-examples {
+    padding: 0 2rem 3rem;
+  }
+}
 .scs-scheme {
   display: flex;
   flex-wrap: wrap;
@@ -1713,12 +1935,22 @@ p {
   background-color: #d5d5d3;
 }
 
-.scs-scheme {
-  padding: 0 2rem 3rem;
+.scs-scheme .card {
+  padding: 1.5rem;
+}
+.scs-scheme .card .row {
+  padding-left: 0;
+}
+.scs-scheme .card .col {
+  margin-top: 0;
+  padding-left: 0;
+}
+.scs-scheme .card img {
+  margin-top: 0;
 }
 .scs-scheme h3 {
   color: #cd942b;
-  margin: 3rem 0 0;
+  margin: 0;
   font-size: 1.3rem;
   letter-spacing: 1px;
   width: 100%;
@@ -1728,7 +1960,7 @@ p {
   color: #6d736f;
 }
 .scs-scheme img {
-  margin: 1.25rem 0 0;
+  margin: 0;
   border: 5px solid #383e3a;
   width: 80%;
   max-width: 800px;
@@ -1742,6 +1974,17 @@ p {
 .scs-scheme ul {
   width: 100%;
   margin: 1.25rem 0;
+}
+
+@media (min-width: 768px) {
+  .scs-scheme .card {
+    padding: 2.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .scs-scheme .card {
+    padding: 3rem;
+  }
 }
 
 /*# sourceMappingURL=application.css.map */
