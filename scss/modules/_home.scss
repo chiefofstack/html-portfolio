@@ -95,6 +95,7 @@ $halfInnerHeight: var(--app-height) / 2;
 .card{
     background-color: $white;
     box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
+    height: 100%;
 
     & img{
         width:100%;
@@ -106,6 +107,10 @@ $halfInnerHeight: var(--app-height) / 2;
 
     & p, & .btn{
         margin: 1.25rem;
+    }
+
+    & > p {
+        min-height:73px;
     }
 }
 
@@ -129,7 +134,6 @@ $halfInnerHeight: var(--app-height) / 2;
 
 .card-contact{
     margin-bottom:100px;
-    padding-bottom:70px;
     & h3{
         color: $primary-color;
         margin: 1.25rem;

@@ -25,36 +25,53 @@ include 'layout/header.php';
                     <h2>My Portfolio</h2>
                 </div>        
                 <div class="row">
-                    <div class="col-12 col-md-6 col-xl-3">
+                    <div class="col-12 col-md-6 col-xl-4">
                         <div class="card">
-                            <img src="images/netmatters-rebuild.jpg" alt="this is an alt text">
-                            <h2>Netmatters Website</h2>
-                            <p>Fully responsive rebuild of the Netmatters homepage using SASS, Bootstrap, HTML and Javascript. Features a drop-down mega menu, slideshow, sidebar and cookie consent popup which are all based on jQuery. Compatible with screen sizes 280px and up.</p>
-                            <a href="https://netmatters.mark-acab.netmatters-scs.co.uk/" class="btn btn-sm btn-read-more" target="_blank">View Project <i class="fa fa-angle-right"></i></a>
+                            <img src="images/laravel-company-management.jpg" alt="this is an alt text">
+                            <h2>Laravel Company Management</h2>
+                            <p>A simple Laravel demo of an admin panel to manage companies and employees. I followed Test Driven Development (TDD) to test that routes are reached after form validation or other queries were made. </p>
+                            <a href="https://company.mark-acab.netmatters-scs.co.uk/" class="btn btn-sm btn-read-more" target="_blank">View Project <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-xl-3">
+                    <div class="col-12 col-md-6 col-xl-4">
                         <div class="card">
-                            <img src="images/digest-website.jpg" alt="this is an alt text">
-                            <h2>Digest.ph Website</h2>
-                            <p>I built the backbone of the project using Laravel and VueJS, it features a CMS, taxonomoy, Video Call, Messaging/Chat, Document Search and much more. I also helped train junior developers and supervised them as they improved the site based on the owner's requests.</p>
-                            <a href="https://digest.ph" class="btn btn-sm btn-read-more" target="_blank">View Project <i class="fa fa-angle-right"></i></a>
+                            <img src="images/js-image-picker.jpg" alt="this is an alt text">
+                            <h2>JS Image Picker</h2>
+                            <p>A simple demo of javascript arrays in conjuction with input validation and third party API integration. The email field is validated using JS and stored together with the selected image in an array of objects. </p>
+                            <a href="https://image-picker.mark-acab.netmatters-scs.co.uk/" class="btn btn-sm btn-read-more" target="_blank">View Project <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-xl-3">
-                        <div class="card">
-                            <img src="images/istar-website.jpg" alt="this is an alt text">
-                            <h2>iStar Website</h2>
-                            <p>Complete website build using Wordpress. I created a theme based on a ready made HTML template and customized it based on the wireframe we designed. The site features 3rd party shopping cart integration, full width slideshow, contact form and blog pages.</p>
-                            <a href="https://istarwebsolutions.com" class="btn btn-sm btn-read-more" target="_blank">View Project <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-xl-3">
+                    <div class="col-12 col-md-6 col-xl-4">
                         <div class="card">
                             <img src="images/contact-form.jpg" alt="this is an alt text">
                             <h2>Frontend and Backend Validation</h2>
-                            <p>A secure contact form that gives realtime feedback to the user as the user types in to the form fields. For additional security, there are redundant validations on the server side before the inputs are saved, which is essential to prevent malicious users from abusing the form.</p>
+                            <p>The form gives realtime feedback as the user types in to the input fields using JS. PHP server side validation is also implemented prior to persisting the data into the database.</p>
                             <a href="#contact" class="btn btn-sm btn-read-more" target="_blank">View Project <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card">
+                            <img src="images/netmatters-rebuild.jpg" alt="this is an alt text">
+                            <h2>Netmatters Website</h2>
+                            <p>Fully responsive rebuild of the Netmatters homepage using PHP, Javascript, jQuery, SASS, Bootstrap, and HTML. Features a drop-down mega menu, slideshow, sidebar, contact form and cookie consent popup which are all based on PHP and JS. Compatible with screen sizes 280px and up.</p>
+                            <a href="https://netmatters.mark-acab.netmatters-scs.co.uk/" class="btn btn-sm btn-read-more" target="_blank">View Project <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card">
+                            <img src="images/digest-website.jpg" alt="this is an alt text">
+                            <h2>Digest Web App</h2>
+                            <p>The project was built using Laravel and VueJS, it features a stepper form for the contract generator, Elastic Search integration for the Legal researh library, CMS, taxonomoy, messaging/chat, blog and directory. Here I guided junior developers as they improved the site based on company requirements.</p>
+                            <a href="https://digest.ph" class="btn btn-sm btn-read-more" target="_blank">View Project <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card">
+                            <img src="images/istar-website.jpg" alt="this is an alt text">
+                            <h2>iStar Website</h2>
+                            <p>Complete website build using Wordpress. I customized a ready made theme based on the company requirements and integrated 3rd party shopping cart into the UI. The site features full width slideshow, contact form, blog pages as well. It also utilized 3rd pary Wordpress plugins.</p>
+                            <a href="https://istarwebsolutions.com" class="btn btn-sm btn-read-more" target="_blank">View Project <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
