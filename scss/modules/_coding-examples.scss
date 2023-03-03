@@ -10,7 +10,6 @@
     background-color: $body-bg-color;
 }
 .coding-examples{
-    padding: 0 2rem 3rem;
 
     .card{
         display:flex;
@@ -53,14 +52,12 @@
         }
     }
 
+}
 
-
-
-
-
-
-
-
+@media (min-width: map.get($breakpoints, "md")) {
+    .coding-examples{
+        padding: 0 2rem 3rem;
+    }
 }
 
 @media (min-width: map.get($breakpoints, "lg")) {

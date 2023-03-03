@@ -10,11 +10,26 @@
     background-color: $body-bg-color;
 }
 .scs-scheme{
-    padding: 0 2rem 3rem;
+
+    & .card{
+        padding: 1.5rem;
+
+        & .row{
+            padding-left: 0;
+        }
+
+        & .col{
+            margin-top: 0;
+            padding-left: 0;
+        }
+        & img{
+            margin-top: 0;
+        }
+    }
 
     & h3{
         color: $primary-color;
-        margin: 3rem 0 0;
+        margin: 0;
         font-size: 1.30rem;
         letter-spacing: 1px;
         width:100%;
@@ -25,7 +40,7 @@
     }
 
     & img{
-        margin: 1.25rem 0 0;
+        margin: 0;
         border:5px solid #383e3a;
         width:80%;
         max-width: 800px;
@@ -44,11 +59,15 @@
     }
 }
 
-@media (min-width: map.get($breakpoints, "lg")) {
-
+@media (min-width: map.get($breakpoints, "md")) {
+    .scs-scheme .card{
+        padding: 2.5rem;
+    }
 }
-
 @media (min-width: map.get($breakpoints, "xl")) {
+    .scs-scheme .card{
+        padding: 3rem;
+    }
 
 }
 
